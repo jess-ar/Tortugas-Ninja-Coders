@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color:  rgb(8, 97, 32);
+    color: white;
+}
+
+.navbar {  
+    font-size: 15px;
+    display: flex;
+    margin-right: 30px;
+}
+
+.link {   /* Acerca de y contactos */
+    margin-left: 30px;
+}
+
+.logo {  /* nombre equipo */
+    margin-left: 60px; 
+}
+
+
+.descripcion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    word-wrap: break-word;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    padding-left: 60px;
+    padding-right: 40px;
+}
+
+.descrip-equipo {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color:  white;
+    margin-left: 50px;
+}
+
+.fotoequipo {
+    display: flex;
+    width:60%;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.fotoequipo:hover {
+    transform: scale(1.1);
+    border-radius: 30px;
+    cursor: pointer;
+    text-shadow: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.descri-per {
+    padding-top: 50px;
+    color: white;
+}
+
+.imag-pers{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 350px;
+}
+
+#persV, #persT, #persL, #persA {
+    width: 200px;
+    height:300px;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+#persV:hover{
+    transform: scale(1.1);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+#persT:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+#persL:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+#persA:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+h3 {
+    color:white;
+}
+
+#titPers{
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#infInic{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#descri-pers{
+    background-color: rgb(207, 131, 76);
+    width: 90%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 2%;
+    color: white;
+}
+
+#talena, #amoly, #larota, #venus, h3 {
+    display: none;
+}
+
+#descri-pers {
+    background-color: rgb(207, 131, 76);
+    width: 90%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0;
+    margin: 5%;
+    color: white;
+}
+
+#talena, #amoly, #larota, #venus, h3 {
+    display: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+ol li{
+   font-weight: bold;
+   color: green;
+   
+}
+ul li {
+    font-weight: lighter;
+    color: white;
+}
+
+.conjuntoListado {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 80px;
+}
+
+.conjuntoListado h2 {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding-bottom: 30px;
+    color: rgb(207, 131, 76);
+}
+
+/* Establece el estilo del sistema para los checkboxes */
+input[type="checkbox"] {
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    appearance: none;         
+    background-color: white; /*color de fondo de los cuadraditos*/
+    border: 2px solid rgb(207, 131, 76);;  /* borde de los cuadraditos*/
+    width: 15px; /*tamaño cuadradito */
+    height: 15px; /*tamaño cuadradito */
+    cursor: pointer;
+    /* Agrega posición relativa para el elemento padre */
+    position: relative;
+    margin-right: 8px; /* para separar el texto del cuadradito*/
+}
+  
+  /* Cambia el color del indicador de marcado cuando el checkbox está marcado */
+input[type="checkbox"]:checked {
+    background-color: green;
+}
+  
+  /* Pseudo-elemento ::before para agregar un tick cuando el checkbox está marcado */
+  input[type="checkbox"]::before {
+    content: '\2713'; /* Símbolo Unicode del tick (✓) */
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*para centrar el tick*/
+    font-size: 14px;
+    visibility: hidden; /*para hacer invisible la parte que clicamos o no*/
+}
+  
+/* Muestra el tick cuando el checkbox está marcado */
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+  
+.social-icon {
+    margin: 20px;
+    margin-bottom: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: rgb(9, 135, 43);
+}
+
